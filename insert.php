@@ -6,10 +6,10 @@ if(isset($_POST['sub']))
 {
 $name=$_POST['Name'];
 $username=$_POST['Username'];
-$number=$_POST['phone_no'];
+$number=$_POST['phoneno'];
 $address=$_POST['Address'];
 $password=$_POST['Password'];
-$sql="insert into  user_registration(Name,Username,Phone_no,Address,Password)values('$name','$username','$number','$address','$password')";
+$sql="insert into  userregistration(name,username,phoneno,address,password)values('$name','$username','$number','$address','$password')";
 $result=mysqli_query($conn,$sql);
 if($result)
 {
@@ -31,7 +31,7 @@ else
 	<input type="text" name="Username" id="un"><br><br>
 
 	<label for="pn">Phone No:</label>
-	<input type="number" name="phone_no" id="pn" maxlength=10><br><br>
+	<input type="number" name="phoneno" id="pn" maxlength=10><br><br>
 
 	<label for="add">Address:&nbsp;&nbsp;</label>
 	<textarea name="Address" id="add" ></textarea><br><br>
